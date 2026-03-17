@@ -2,22 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>SkyFetch Weather Dashboard</title>
+  <title>SkyFetch Weather App</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <div class="container">
-    <h1>🌤 SkyFetch Weather</h1>
+    <h1>SkyFetch Weather</h1>
 
+    <!-- Search -->
     <div class="search-box">
-      <input type="text" id="searchInput" placeholder="Enter city name..." />
+      <input type="text" id="cityInput" placeholder="Enter city">
       <button id="searchBtn">Search</button>
     </div>
 
+    <!-- Recent Searches -->
+    <div id="recentContainer">
+      <h3>Recent Searches</h3>
+      <div id="recentList"></div>
+      <button id="clearBtn">Clear</button>
+    </div>
+
+    <!-- Weather -->
     <div id="weatherContainer"></div>
 
+    <!-- Forecast -->
     <div id="forecastContainer"></div>
+
   </div>
 
   <script src="app.js"></script>
