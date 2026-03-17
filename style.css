@@ -1,61 +1,78 @@
-body{
-  font-family: Arial;
-  background: linear-gradient(135deg, purple, blue);
-  color:white;
-  text-align:center;
-  padding:50px;
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  margin: 0;
+  padding: 0;
+  color: #333;
 }
 
-.search-box{
-  margin-bottom:20px;
+.container {
+  max-width: 500px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
 }
 
-#cityInput{
-  padding:10px;
-  width:200px;
-  border-radius:5px;
-  border:none;
+h1 {
+  margin-bottom: 20px;
 }
 
-#searchBtn{
-  padding:10px 15px;
-  border:none;
-  border-radius:5px;
-  background:orange;
-  cursor:pointer;
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
-#searchBtn:hover{
-  background:darkorange;
+.search-box input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }
 
-#weather{
-  background:white;
-  color:black;
-  padding:20px;
-  border-radius:10px;
-  display:inline-block;
-  min-width:250px;
+.search-box button {
+  padding: 10px 15px;
+  border: none;
+  background: #4facfe;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-/* ❌ Error */
-.error{
-  color:red;
-  font-weight:bold;
+.search-box button:hover {
+  background: #007bff;
 }
 
-/* ⏳ Loader */
-.loader{
-  border:5px solid #f3f3f3;
-  border-top:5px solid blue;
-  border-radius:50%;
-  width:40px;
-  height:40px;
-  animation:spin 1s linear infinite;
-  margin:auto;
+#weatherContainer {
+  margin-top: 20px;
 }
 
-@keyframes spin{
-  0%{transform:rotate(0deg);}
-  100%{transform:rotate(360deg);}
+#forecastContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #f3f3f3;
+  padding: 10px;
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 50px;
+}
+
+@media (max-width: 500px) {
+  .container {
+    margin: 20px;
+  }
 }
